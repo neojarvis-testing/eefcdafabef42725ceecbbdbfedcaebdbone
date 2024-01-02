@@ -19,6 +19,7 @@ import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import java.time.*;
 // import io.cucumber.java.After;
 // import io.cucumber.java.Before;
 // import io.cucumber.java.en.Given;
@@ -54,6 +55,13 @@ public class GilletteTests {
     @Given("I am on the Gillette website")
     public void iAmOnTheGilletteWebsite() {
         driver.get("https://www.gillette.co.in/en-in");
+        try {
+			Thread.sleep(1500000);
+            System.out.println("execution the sleep");
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
     
     @When("^I hover on from the top navigation$")
